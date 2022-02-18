@@ -1,9 +1,10 @@
-# module_2
+# Module_2
 Challenge_2
-#User Story
+
+### User Story
 The following code provides user, the ability to save the qualifying loans to a CSV file and share the results as a spreadsheet.
 
-#Acceptance Criteria
+### Acceptance Criteria
 Given that I’m using the loan qualifier CLI, when I run the qualifier, then the tool should prompt the user to save the results as a CSV file.
 
 Given that no qualifying loans exist, when prompting a user to save a file, then the program should notify the user and exit.
