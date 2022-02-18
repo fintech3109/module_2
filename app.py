@@ -23,6 +23,16 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
+def save_csv(header=None): 
+        """Saves to a CSV file named 'qualifying_loans' .
+
+    Args:
+        qualifying_loans (list of lists): The qualifying bank loans.
+    Returns: 
+        A CSV File.
+    """
+    
+    
 
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
@@ -112,7 +122,7 @@ def save_qualifying_loans(qualifying_loans):
     if ("savings_csv"):
         csv_path= questionary.text("Enter Name. Ex: daily_rate_sheet.csv: ").ask()
         csv_path= Path(csv_path)
-        savings_csv(save_qualifying_loans, str(csv_path)["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"])
+        save_csv(save_qualifying_loans, str(csv_path)["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"])
 
 
 def run():
